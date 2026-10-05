@@ -164,7 +164,7 @@ export default function DashboardScreen({ user, onGoToProfile }) {
 function TabButton({ icon, label, active, onPress }) {
   return (
     <TouchableOpacity style={styles.tabButton} activeOpacity={0.7} onPress={onPress}>
-      <Ionicons name={active ? icon : `${icon}-outline`} size={22} color={active ? '#0e9d5a' : '#999'} />
+      <Ionicons name={active ? icon : `${icon}-outline`} size={22} color={active ? '#0052cc' : '#999'} />
       <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{label}</Text>
     </TouchableOpacity>
   );
@@ -200,7 +200,7 @@ function HomeTab({ user, onQuickAction, activityLog }) {
             onPress={() => onQuickAction(action.id)}
           >
             <View style={styles.quickIconWrap}>
-              <Ionicons name={action.icon} size={22} color="#0e9d5a" />
+              <Ionicons name={action.icon} size={22} color="#0052cc" />
             </View>
             <Text style={styles.quickLabel}>{action.label}</Text>
           </TouchableOpacity>
@@ -213,7 +213,7 @@ function HomeTab({ user, onQuickAction, activityLog }) {
         {activityLog.slice(0, 3).map((entry) => (
           <View key={entry.id} style={styles.tripRow}>
             <View style={styles.tripIconWrap}>
-              <Ionicons name={entry.icon || 'time-outline'} size={18} color="#0e9d5a" />
+              <Ionicons name={entry.icon || 'time-outline'} size={18} color="#0052cc" />
             </View>
             <View style={{ flex: 1 }}>
               <Text style={styles.tripTitle}>{entry.title}</Text>
@@ -257,7 +257,7 @@ function ServicesTab({ activeService, setActiveService, logActivity }) {
           onPress={() => setActiveService(card.id)}
         >
           <View style={styles.rideIconWrap}>
-            <Ionicons name={card.icon} size={22} color="#0e9d5a" />
+            <Ionicons name={card.icon} size={22} color="#0052cc" />
           </View>
           <View style={{ flex: 1 }}>
             <Text style={styles.rideLabel}>{card.label}</Text>
@@ -331,11 +331,11 @@ function FoodOrderPanel({ onBack, logActivity }) {
               </View>
               <View style={styles.stepper}>
                 <TouchableOpacity style={styles.stepperBtn} onPress={() => changeQty(item.id, -1)} disabled={qty === 0}>
-                  <Ionicons name="remove" size={16} color={qty === 0 ? '#ccc' : '#0e9d5a'} />
+                  <Ionicons name="remove" size={16} color={qty === 0 ? '#ccc' : '#0052cc'} />
                 </TouchableOpacity>
                 <Text style={styles.stepperValue}>{qty}</Text>
                 <TouchableOpacity style={styles.stepperBtn} onPress={() => changeQty(item.id, 1)}>
-                  <Ionicons name="add" size={16} color="#0e9d5a" />
+                  <Ionicons name="add" size={16} color="#0052cc" />
                 </TouchableOpacity>
               </View>
             </View>
@@ -435,11 +435,11 @@ function PrintPanel({ onBack, logActivity }) {
               off the LATEST value of pages, which matters if multiple state
               updates could ever get batched together. */}
           <TouchableOpacity style={styles.stepperBtn} onPress={() => setPages((p) => Math.max(1, p - 1))}>
-            <Ionicons name="remove" size={18} color="#0e9d5a" />
+            <Ionicons name="remove" size={18} color="#0052cc" />
           </TouchableOpacity>
           <Text style={styles.stepperValueLarge}>{pages}</Text>
           <TouchableOpacity style={styles.stepperBtn} onPress={() => setPages((p) => p + 1)}>
-            <Ionicons name="add" size={18} color="#0e9d5a" />
+            <Ionicons name="add" size={18} color="#0052cc" />
           </TouchableOpacity>
         </View>
 
@@ -520,7 +520,7 @@ function ActivityTab({ activityLog }) {
           {activityLog.map((entry) => (
             <View key={entry.id} style={styles.tripRow}>
               <View style={styles.tripIconWrap}>
-                <Ionicons name={entry.icon || 'time-outline'} size={18} color="#0e9d5a" />
+                <Ionicons name={entry.icon || 'time-outline'} size={18} color="#0052cc" />
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={styles.tripTitle}>{entry.title}</Text>
@@ -569,9 +569,9 @@ const styles = StyleSheet.create({
   greeting: { fontSize: 13, color: '#999', marginBottom: 4 },
   name: { fontSize: 22, fontWeight: '700', color: '#1a1a1a', marginBottom: 20 },
 
-  avatar: { width: 40, height: 40, borderRadius: 20, backgroundColor: '#0e9d5a', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
+  avatar: { width: 40, height: 40, borderRadius: 20, backgroundColor: '#0052cc', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
 
-  promoBanner: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#12161a', borderRadius: 16, padding: 18, marginBottom: 28 },
+  promoBanner: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#003580', borderRadius: 16, padding: 18, marginBottom: 28 },
   promoTitle: { color: '#fff', fontSize: 15, fontWeight: '700', marginBottom: 4 },
   promoSubtitle: { color: '#b8bfc6', fontSize: 12 },
 
@@ -582,10 +582,10 @@ const styles = StyleSheet.create({
     width: '31%', backgroundColor: '#fff', borderRadius: 14, paddingVertical: 16, alignItems: 'center', marginBottom: 12,
     shadowColor: '#000', shadowOpacity: 0.04, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 1,
   },
-  quickIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e9f8ef', alignItems: 'center', justifyContent: 'center', marginBottom: 8 },
+  quickIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e8f0ff', alignItems: 'center', justifyContent: 'center', marginBottom: 8 },
   quickLabel: { fontSize: 11.5, fontWeight: '600', color: '#1a1a1a', textAlign: 'center', paddingHorizontal: 4 },
 
-  rideIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e9f8ef', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
+  rideIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e8f0ff', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
   rideLabel: { fontSize: 15, fontWeight: '600', color: '#1a1a1a', marginBottom: 2 },
   rideEta: { fontSize: 12, color: '#999' },
 
@@ -604,7 +604,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', borderRadius: 14, paddingVertical: 14, paddingHorizontal: 14, marginBottom: 10,
     shadowColor: '#000', shadowOpacity: 0.04, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 1,
   },
-  stepper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#f3fbf6', borderRadius: 10, paddingHorizontal: 4 },
+  stepper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#eff6ff', borderRadius: 10, paddingHorizontal: 4 },
   stepperBtn: { width: 28, height: 28, alignItems: 'center', justifyContent: 'center' },
   stepperValue: { fontSize: 14, fontWeight: '700', color: '#1a1a1a', width: 20, textAlign: 'center' },
 
@@ -618,13 +618,13 @@ const styles = StyleSheet.create({
   chip: {
     borderWidth: 1.5, borderColor: '#e0e0e0', borderRadius: 10, paddingVertical: 10, paddingHorizontal: 14, marginRight: 8, marginBottom: 8, backgroundColor: '#fff',
   },
-  chipSelected: { borderColor: '#0e9d5a', backgroundColor: '#f3fbf6' },
+  chipSelected: { borderColor: '#0052cc', backgroundColor: '#eff6ff' },
   chipText: { fontSize: 13, color: '#555', fontWeight: '500' },
-  chipTextSelected: { color: '#0e9d5a', fontWeight: '700' },
+  chipTextSelected: { color: '#0052cc', fontWeight: '700' },
 
   tripList: { marginTop: 4 },
   tripRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#eee' },
-  tripIconWrap: { width: 34, height: 34, borderRadius: 10, backgroundColor: '#e9f8ef', alignItems: 'center', justifyContent: 'center', marginRight: 12 },
+  tripIconWrap: { width: 34, height: 34, borderRadius: 10, backgroundColor: '#e8f0ff', alignItems: 'center', justifyContent: 'center', marginRight: 12 },
   tripTitle: { fontSize: 14, fontWeight: '600', color: '#1a1a1a', marginBottom: 2 },
   tripSubtitle: { fontSize: 12, color: '#999' },
 
@@ -632,7 +632,7 @@ const styles = StyleSheet.create({
     position: 'absolute', left: 0, right: 0, bottom: 0, backgroundColor: '#fff',
     paddingHorizontal: 20, paddingTop: 12, paddingBottom: 16, borderTopWidth: 1, borderTopColor: '#eee',
   },
-  primaryButton: { backgroundColor: '#0e9d5a', borderRadius: 14, paddingVertical: 16, alignItems: 'center' },
+  primaryButton: { backgroundColor: '#0052cc', borderRadius: 14, paddingVertical: 16, alignItems: 'center' },
   primaryButtonDisabled: { opacity: 0.6 },
   primaryButtonText: { color: '#fff', fontSize: 15, fontWeight: '700' },
 
@@ -642,5 +642,5 @@ const styles = StyleSheet.create({
   },
   tabButton: { flex: 1, alignItems: 'center' },
   tabLabel: { fontSize: 10.5, color: '#999', marginTop: 3, fontWeight: '500' },
-  tabLabelActive: { color: '#0e9d5a', fontWeight: '700' },
+  tabLabelActive: { color: '#0052cc', fontWeight: '700' },
 });

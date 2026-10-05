@@ -14,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { updateUser } from '../utils/authStore';
 
 // Small helper function — not a hook, just a plain JS utility that turns a
-// full name like "Chinedu Okafor" into initials "CO" for the avatar circle.
+// full name like "Chamberlian Njoku" into initials "CN" for the avatar circle.
 function getInitials(name) {
   if (!name || !name.trim()) return '?';
   const parts = name.trim().split(' ').filter(Boolean);
@@ -157,7 +157,7 @@ export default function ProfileScreen({ user, onBack, onUserUpdate, onLogout }) 
       >
         <View style={styles.topRow}>
           <TouchableOpacity onPress={onBack} hitSlop={10} style={styles.backButton}>
-            <Ionicons name="arrow-back" size={20} color="#0e9d5a" />
+            <Ionicons name="arrow-back" size={20} color="#0052cc" />
             <Text style={styles.backText}>Back</Text>
           </TouchableOpacity>
 
@@ -192,7 +192,7 @@ export default function ProfileScreen({ user, onBack, onUserUpdate, onLogout }) 
           editable={isEditing}
           onChangeText={(text) => updateField('fullName', text)}
           error={errors.fullName}
-          placeholder="John Doe"
+          placeholder="Chamberlian Njoku"
         />
 
         <ProfileField
@@ -240,7 +240,7 @@ export default function ProfileScreen({ user, onBack, onUserUpdate, onLogout }) 
           </TouchableOpacity>
         ) : (
           <TouchableOpacity style={styles.logoutButton} onPress={handleLogout} activeOpacity={0.8}>
-            <Ionicons name="log-out-outline" size={18} color="#e0453c" />
+            <Ionicons name="log-out-outline" size={18} color="#0052cc" />
             <Text style={styles.logoutText}>Log Out</Text>
           </TouchableOpacity>
         )}
@@ -294,13 +294,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontSize: 15,
     fontWeight: '500',
     marginLeft: 4,
   },
   editText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontSize: 15,
     fontWeight: '700',
   },
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
     width: 84,
     height: 84,
     borderRadius: 42,
-    backgroundColor: '#0e9d5a',
+    backgroundColor: '#0052cc',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 14,
@@ -357,10 +357,10 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
   },
   inputError: {
-    color: '#e0453c',
+    color: '#0052cc',
   },
   errorText: {
-    color: '#e0453c',
+    color: '#0052cc',
     fontSize: 12,
     marginTop: 4,
   },
@@ -386,11 +386,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 14,
     borderWidth: 1,
-    borderColor: '#e0453c',
+    borderColor: '#0052cc',
     marginTop: 8,
   },
   logoutText: {
-    color: '#e0453c',
+    color: '#0052cc',
     fontSize: 15,
     fontWeight: '600',
     marginLeft: 8,

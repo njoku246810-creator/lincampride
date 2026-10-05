@@ -52,7 +52,7 @@ export default function SplashScreen({ onFinish }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#0b3d2e" />
+      <StatusBar barStyle="light-content" backgroundColor="#003580" />
       <Image
         source={require('../assets/lincamp-logo-transparent.png')}
         style={styles.logo}
@@ -65,7 +65,7 @@ export default function SplashScreen({ onFinish }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0b3d2e',
+    backgroundColor: '#003580',
     justifyContent: 'center',
     alignItems: 'center',
   },

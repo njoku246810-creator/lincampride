@@ -45,7 +45,7 @@ const CAMPUS_LOCATIONS = [
 const MOCK_RIDES = [
   {
     id: 'r1',
-    driverName: 'Chinedu Okafor',
+    driverName: 'Chamberlian Njoku',
     rating: 4.8,
     vehicle: 'Toyota Corolla · White',
     pickup: 'Main Gate',
@@ -277,7 +277,7 @@ export default function FindRideScreen({ logActivity }) {
             {item.pickup} → {item.destination}
           </Text>
           <View style={styles.rideMetaRow}>
-            <Ionicons name="star" size={12} color="#f5a623" />
+            <Ionicons name="star" size={12} color="#0052cc" />
             <Text style={styles.rideMetaText}>{item.rating} · {item.vehicle}</Text>
           </View>
           <View style={styles.rideMetaRow}>
@@ -291,7 +291,7 @@ export default function FindRideScreen({ logActivity }) {
         </View>
         <View style={{ alignItems: 'flex-end' }}>
           <Text style={styles.ridePrice}>{item.price === 0 ? 'Free' : naira(item.price)}</Text>
-          {isSelected && <Ionicons name="checkmark-circle" size={20} color="#0e9d5a" style={{ marginTop: 6 }} />}
+          {isSelected && <Ionicons name="checkmark-circle" size={20} color="#0052cc" style={{ marginTop: 6 }} />}
         </View>
       </TouchableOpacity>
     );
@@ -333,7 +333,7 @@ export default function FindRideScreen({ logActivity }) {
               onPress={() => handlePickSuggestion(place)}
               activeOpacity={0.6}
             >
-              <Ionicons name="location-outline" size={16} color="#0e9d5a" />
+              <Ionicons name="location-outline" size={16} color="#0052cc" />
               <Text style={styles.suggestionText}>{place}</Text>
             </TouchableOpacity>
           ))}
@@ -351,7 +351,7 @@ export default function FindRideScreen({ logActivity }) {
     if (loading) {
       return (
         <View style={styles.rideStateWrap}>
-          <ActivityIndicator size="large" color="#0e9d5a" />
+          <ActivityIndicator size="large" color="#0052cc" />
           <Text style={styles.rideStateText}>Finding rides near you…</Text>
         </View>
       );
@@ -359,7 +359,7 @@ export default function FindRideScreen({ logActivity }) {
     if (error) {
       return (
         <View style={styles.rideStateWrap}>
-          <Ionicons name="alert-circle-outline" size={36} color="#e0453c" />
+          <Ionicons name="alert-circle-outline" size={36} color="#0052cc" />
           <Text style={styles.rideStateText}>{error}</Text>
           <TouchableOpacity style={styles.retryButton} onPress={fetchAvailableRides}>
             <Text style={styles.retryButtonText}>Retry</Text>
@@ -390,7 +390,7 @@ export default function FindRideScreen({ logActivity }) {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#0e9d5a']} tintColor="#0e9d5a" />}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#0052cc']} tintColor="#0052cc" />}
         ListFooterComponent={canBook ? <View style={{ height: 70 }} /> : null}
       />
 
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', borderRadius: 14, paddingHorizontal: 16, paddingVertical: 14, marginBottom: 8,
     shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 10, shadowOffset: { width: 0, height: 4 }, elevation: 2,
   },
-  searchDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#0e9d5a', marginRight: 12 },
+  searchDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#0052cc', marginRight: 12 },
   searchInput: { flex: 1, fontSize: 15, color: '#1a1a1a', fontWeight: '500', paddingVertical: 0 },
 
   suggestionBox: {
@@ -436,28 +436,28 @@ const styles = StyleSheet.create({
     borderWidth: 1.5, borderColor: 'transparent',
     shadowColor: '#000', shadowOpacity: 0.04, shadowRadius: 8, shadowOffset: { width: 0, height: 2 }, elevation: 1,
   },
-  rideCardSelected: { borderColor: '#0e9d5a', backgroundColor: '#f3fbf6' },
+  rideCardSelected: { borderColor: '#0052cc', backgroundColor: '#eff6ff' },
   rideCardDisabled: { opacity: 0.5 },
-  rideIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e9f8ef', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
-  rideIconWrapSelected: { backgroundColor: '#0e9d5a' },
+  rideIconWrap: { width: 42, height: 42, borderRadius: 12, backgroundColor: '#e8f0ff', alignItems: 'center', justifyContent: 'center', marginRight: 14 },
+  rideIconWrapSelected: { backgroundColor: '#0052cc' },
   rideLabel: { fontSize: 15, fontWeight: '600', color: '#1a1a1a', marginBottom: 2 },
   rideEta: { fontSize: 12, color: '#999', marginBottom: 4 },
   ridePrice: { fontSize: 14, fontWeight: '700', color: '#1a1a1a' },
-  driverInitial: { fontSize: 16, fontWeight: '700', color: '#0e9d5a' },
+  driverInitial: { fontSize: 16, fontWeight: '700', color: '#0052cc' },
   driverInitialSelected: { color: '#fff' },
   rideMetaRow: { flexDirection: 'row', alignItems: 'center', marginTop: 2 },
   rideMetaText: { fontSize: 11.5, color: '#999', marginLeft: 4 },
 
   rideStateWrap: { alignItems: 'center', paddingVertical: 48, paddingHorizontal: 24 },
   rideStateText: { fontSize: 13, color: '#999', textAlign: 'center', marginTop: 10, lineHeight: 18 },
-  retryButton: { marginTop: 14, backgroundColor: '#0e9d5a', paddingHorizontal: 20, paddingVertical: 10, borderRadius: 8 },
+  retryButton: { marginTop: 14, backgroundColor: '#0052cc', paddingHorizontal: 20, paddingVertical: 10, borderRadius: 8 },
   retryButtonText: { color: '#fff', fontWeight: '600', fontSize: 13 },
 
   bottomBar: {
     position: 'absolute', left: 0, right: 0, bottom: 0, backgroundColor: '#fff',
     paddingHorizontal: 20, paddingTop: 12, paddingBottom: 16, borderTopWidth: 1, borderTopColor: '#eee',
   },
-  primaryButton: { backgroundColor: '#0e9d5a', borderRadius: 14, paddingVertical: 16, alignItems: 'center' },
+  primaryButton: { backgroundColor: '#0052cc', borderRadius: 14, paddingVertical: 16, alignItems: 'center' },
   primaryButtonDisabled: { opacity: 0.6 },
   primaryButtonText: { color: '#fff', fontSize: 15, fontWeight: '700' },
 });

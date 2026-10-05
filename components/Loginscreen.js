@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   errorText: {
-    color: '#e0453c',
+    color: '#0052cc',
     fontSize: 12,
     marginBottom: 8,
   },
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   toggleText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontWeight: '600',
     fontSize: 13,
   },
@@ -258,12 +258,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   forgotText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontSize: 13,
     fontWeight: '500',
   },
   button: {
-    backgroundColor: '#0e9d5a',
+    backgroundColor: '#0052cc',
     borderRadius: 10,
     paddingVertical: 14,
     alignItems: 'center',
@@ -283,10 +283,10 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#0e9d5a',
+    borderColor: '#0052cc',
   },
   secondaryButtonText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontSize: 16,
     fontWeight: '500',
   },

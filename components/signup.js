@@ -120,7 +120,7 @@ export default function SignupScreen({ onSignupSuccess, onNavigateToLogin }) {
       <Text style={styles.label}>Full Name</Text>
       <TextInput
         style={styles.input}
-        placeholder="John Doe"
+        placeholder="Chamberlian Njoku"
         placeholderTextColor="#999"
         value={fullName}
         onChangeText={(text) => {
@@ -262,17 +262,17 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   toggleText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontWeight: '600',
     fontSize: 13,
   },
   errorText: {
-    color: '#e0453c',
+    color: '#0052cc',
     fontSize: 12,
     marginBottom: 8,
   },
   button: {
-    backgroundColor: '#0e9d5a',
+    backgroundColor: '#0052cc',
     borderRadius: 10,
     paddingVertical: 14,
     alignItems: 'center',
@@ -293,10 +293,10 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#0e9d5a',
+    borderColor: '#0052cc',
   },
   secondaryButtonText: {
-    color: '#0e9d5a',
+    color: '#0052cc',
     fontSize: 16,
     fontWeight: '500',
   },
